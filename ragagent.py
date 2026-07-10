@@ -21,7 +21,7 @@ if not API_KEY:
 
 pc = Pinecone(api_key=API_KEY)
 
-# 4. Sidebar Gradient
+# 2. Sidebar Gradient
 st.markdown("""
 <style>
 section[data-testid="stSidebar"]{
@@ -59,7 +59,7 @@ with st.sidebar:
     )
     
 
-# 3. Main Operational View
+# 4. Main Operational View
 st.title("📚 ML Book RAG Assistant")
 st.info(f"📖 Current Lecture : **{topic}**")
 query = st.text_input(
@@ -68,7 +68,7 @@ query = st.text_input(
 )
 
 
-# 4. Action Request Processing
+# 5. Action Request Processing
 if st.button("🚀 Ask RAG Assistant", type="primary") and query:
     with st.spinner("Thinking..."):
 
